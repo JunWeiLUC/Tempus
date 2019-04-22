@@ -407,7 +407,7 @@ def AnnoFile(fileName):
 
 
     vcfDF = vcfDF[['compTwoSampl','#CHROM','POS','rsID','REF','ALT','QUAL','FILTER','VariantType','Gene Symbol','CCDS ID','Motif Name',
-                   'Mutation type','Amino acid change','Clincal Significance','PubMed','ENSP ID','CDC position',
+                   'Mutation type','Amino acid change','alleleFrequency','Clincal Significance','PubMed','ENSP ID','CDC position',
                    'Intron','Exon','STRAND','SIFT','PolyPhen','GTof1st','DPof1st','ReadSupport1st','ratioAO1st (%)',
                    'ratioRO1st (%)','GTof2nd','DPof2nd', 'ReadSupport2nd','ratioAO2nd (%)','ratioRO2nd (%)',
                    'vepAnnotationMostImpactTranscripts','vepAnnotationCanonicalTranscript','INFO','FORMAT','normal','vaf5']]
