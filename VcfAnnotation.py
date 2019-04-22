@@ -438,33 +438,37 @@ def AnnoFile(fileName):
         print('Save to csv failed! ')
         print(e)
 
-
-    
-AnnotationProcess = True
-        
-while (AnnotationProcess):
-    try:
-        vcfFileName = input("please input file name without file extension (use 'n' to quit): ")
-        if(vcfFileName == 'n' ):
-            print('Program ended.')
-            AnnotationProcess = False
-        else:                         
-            vcfFileName = './OriginalFile/' + vcfFileName + '.vcf'
-            exists = os.path.isfile(vcfFileName)
-
-            if (exists):
-                AnnoFile(vcfFileName)
-                print('file exists')
-                AnnotationProcess = False
-                
-            else:
-                print('Please check file name and check file is in OriginalFile folder!')
+#checking input file name for annotation
+def main():    
+    AnnotationProcess = True
             
+    while (AnnotationProcess):
+        try:
+            vcfFileName = input("please input file name without file extension (use 'n' to quit): ")
+            if(vcfFileName == 'n' ):
+                print('Program ended.')
+                AnnotationProcess = False
+            else:                         
+                vcfFileName = './OriginalFile/' + vcfFileName + '.vcf'
+                exists = os.path.isfile(vcfFileName)
 
-      
-        
-    except Exception as e:
-        processInfo = 'Error! ' + str(e)
+                if (exists):
+                    AnnoFile(vcfFileName)
+                    AnnotationProcess = False
+                    
+                else:
+                    print('Please check file name and check file is in OriginalFile folder!')
+                
+
+          
+            
+        except Exception as e:
+            processInfo = 'Error! ' + str(e)
+
+
+
+
+main()
 
 
 
