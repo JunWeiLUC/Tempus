@@ -441,7 +441,7 @@ def AnnoFile(fileName):
 #checking input file name for annotation
 def main():    
     AnnotationProcess = True
-    print("Make sure that your vcf file for annotation under .\OriginalFile\ dictionary!")
+    print("Make sure that your vcf file for annotation under .\OriginalFile\ directory!")
             
     while (AnnotationProcess):
         try:
